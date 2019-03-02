@@ -7,7 +7,7 @@ namespace sort
 	void insertion(_Iterator begin, _Iterator end, _Pred const& pred = _Pred())
 	{
 		auto r_end = std::reverse_iterator<_Iterator>(begin);
-		for (auto iter = std::next(begin); end != iter; ++iter)
+		for (auto iter = begin; end != iter; ++iter)
 		{
 			auto r_it = std::reverse_iterator<_Iterator>(std::next(iter));
 			for (auto sub_iter = std::next(r_it); r_end != sub_iter; r_it = sub_iter++)
