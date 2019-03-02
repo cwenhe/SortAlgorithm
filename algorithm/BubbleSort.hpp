@@ -4,8 +4,8 @@
 namespace sort
 {
 
-	template<typename _ValueType, typename _Pred>
-	void bubble(_ValueType* values, size_t const count, _Pred const& pred = std::less<_ValueType>() )
+	template<typename _ValueType, typename _Pred = std::less<_ValueType> >
+	void bubble(_ValueType* values, size_t const count, _Pred const& pred = _Pred() )
 	{
 		for (size_t idx = 0; count > idx+1; ++idx)
 		{
@@ -19,7 +19,7 @@ namespace sort
 	}
 
 	template<typename _ValueType, typename _Pred = std::less<_ValueType>>
-	void bubble(std::vector<_ValueType>& values, _Pred const& pred = std::less<_ValueType>() )
+	void bubble(std::vector<_ValueType>& values, _Pred const& pred = _Pred() )
 	{
 		bubble(values.data(), values.size(), pred);
 	}

@@ -2,6 +2,7 @@
 #include <cassert>
 #include "algorithm/HeapSort.hpp"
 #include "algorithm/BubbleSort.hpp"
+#include "algorithm/SelectionSort.hpp"
 
 int main()
 {
@@ -9,6 +10,7 @@ int main()
 	auto test1 = test;
 	sort::makeHeap(test.data(), test.size());
 	sort::bubble(test1);
+	sort::selection(test1);
 
 	assert(test == test1);
 	
