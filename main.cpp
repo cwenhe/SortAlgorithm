@@ -4,6 +4,7 @@
 #include "algorithm/BubbleSort.hpp"
 #include "algorithm/SelectionSort.hpp"
 #include "algorithm/Insertion.hpp"
+#include "algorithm/ShellSort.hpp"
 
 int main()
 {
@@ -12,7 +13,7 @@ int main()
 	sort::makeHeap(test.data(), test.size());
 	//sort::bubble(test1);
 	//sort::selection(test1);
-	sort::insertion(test1);
+	sort::shell(test1);
 
 	assert(test == test1);
 	

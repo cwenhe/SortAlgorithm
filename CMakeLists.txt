@@ -3,6 +3,6 @@
 project(SortAlgorithm)
 set(ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
-file(GLOB_RECURSE SOURCE_FILES "*.cpp")
+aux_source_directory(${ROOT_PATH} SOURCE_FILES)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
