@@ -21,7 +21,7 @@ namespace sort
 		}
 	}
 
-	template<typename _Container, typename _Pred = std::less<_Container::value_type> >
+	template<typename _Container, typename _Pred = std::less<typename _Container::value_type> >
 	void selection(_Container& dst, _Pred const& pred = _Pred())
 	{
 		selection(dst.begin(), dst.end(), pred);

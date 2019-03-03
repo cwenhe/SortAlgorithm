@@ -9,7 +9,7 @@ namespace sort
 	template<typename _Value>
 	void heapAdjust(_Value* arr, size_t cur_node, size_t const end)
 	{
-		auto left_child = 2 * cur_node+1;
+		size_t left_child = 2 * cur_node+1;
 
 		while (end > left_child)
 		{

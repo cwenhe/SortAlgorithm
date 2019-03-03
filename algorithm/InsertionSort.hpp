@@ -3,7 +3,7 @@
 
 namespace sort
 {
-	template<typename _Iterator, typename _Pred = std::less< std::iterator_traits<_Iterator>::value_type> >
+	template<typename _Iterator, typename _Pred = std::less< typename std::iterator_traits<_Iterator>::value_type> >
 	void insertion(_Iterator begin, _Iterator end, _Pred const& pred = _Pred())
 	{
 		auto r_end = std::reverse_iterator<_Iterator>(begin);
@@ -22,7 +22,7 @@ namespace sort
 
 	}
 
-	template<typename _Container, typename _Pred = std::less< _Container::value_type > >
+	template<typename _Container, typename _Pred = std::less< typename _Container::value_type > >
 	void insertion(_Container& values, _Pred const& pred = _Pred())
 	{
 		insertion(values.begin(), values.end(), pred);
